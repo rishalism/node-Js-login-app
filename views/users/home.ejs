@@ -1,0 +1,69 @@
+<% include('../layouts/header.ejs') %>
+
+    <!-- <h1>welcome to home page</h1>
+
+    <table>
+        <tr>
+            <td>username</td>
+            <td>
+                <%= user.name %>
+            </td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td>
+                <%= user.email %>
+            </td>
+        </tr>
+        <tr>
+            <td>mobile number : </td>
+            <td>
+                <%= user.mobile %>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+
+    <button><a href="/edit?id=<%=user._id %>">Edit</a></button><br><br>
+
+    <button><a href="/logout">Logout</a></button> -->
+
+
+    <div class="container mt-5">
+        <h1 class="text text-center">Welcome to Home Page</h1><br><br>
+
+        <table class="table">
+            <tr>
+                <td>Username</td>
+                <td>
+                    <%= user.name %>
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <%= user.email %>
+                </td>
+            </tr>
+            <tr>
+                <td>Mobile Number</td>
+                <td>
+                    <%= user.mobile %>
+                </td>
+            </tr>
+        </table>
+
+        <a href="/edit?id=<%= user._id %>"><button class="btn btn-primary">Edit</button></a>
+        <a href="/logout"><button class="btn btn-danger">Logout</button></a>
+    </div>
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <% include('../layouts/footer.ejs') %>

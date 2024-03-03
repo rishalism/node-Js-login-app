@@ -1,0 +1,54 @@
+<%- include('../layouts/header.ejs') %>
+
+  <section class="h-100 gradient-form" style="background-color: #715757;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-6">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <% if (typeof message !=='undefined' ) { %>
+                <h4 style="color: red;" class="text-center">
+                  <%= message %>
+                </h4>
+                <% } %>
+            </div>
+            <div class="card-body p-md-5 mx-md-4">
+              <div class="text-center">
+                <img src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-Vector.png" style="width: 185px;"
+                  alt="logo">
+                <h1 class="mt-1 mb-5 pb-1">USER LOGIN</h1>
+              </div>
+              <form action="/login" method="post">
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" class="form-control" placeholder="Enter email address" name="email"
+                    required />
+                </div>
+                <br>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" id="password" class="form-control" name="password" placeholder="Enter password"
+                    required />
+                </div>
+                <br>
+                <div class="text-center pt-1 mb-5 pb-1">
+                  <button class="btn btn-primary btn-block" type="submit">Log in</button>
+                  <br>
+                  <p>Don't have an account?</p>
+                  <a href="/register" class="btn btn-outline-danger">Create new</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<style>
+  body{
+    background-color: grey;
+  }
+</style>
+
+  <%- include('../layouts/footer.ejs') %>

@@ -1,0 +1,50 @@
+<% include('../layouts/header.ejs') %>
+
+    <!-- 
+<form action="" method="post">
+     <input type="hidden" name="user_id" value="<%= user._id %>">
+     <input type="text" name="name" value="<% user.name %>" placeholder="enter name" required><br><br>
+     <input type="email" name="email" value="<% user.email %>" placeholder="enter email" required><br><br>
+     <input type="text" name="mobile" value="<% user.mobile %>" placeholder="enter mobile number" required><br><br>
+     <button type="submit" class="btn btn-success" value="update profile">Update Changes</button>
+ </form>
+ <a href="/home"><button class="btn btn-secondary">Back to Home</button></a>
+ -->
+
+    <div class="container mt-5">
+        <h1 class="text-center">Edit Profile</h1>
+
+        <form action="" method="post">
+            <input type="hidden" name="user_id" value="<%= user._id %>">
+
+            <div class="form-group">
+                <input type="text" name="name" value="<%= user.name %>" class="form-control" placeholder="Enter name"
+                    required>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="email" name="email" value="<%= user.email %>" class="form-control"
+                    placeholder="Enter email" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="text" name="mobile" value="<%= user.mobile %>" class="form-control"
+                    placeholder="Enter mobile number" required>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-success">Update Changes</button>
+        </form>
+
+        <a href="/home"><button class="btn btn-secondary">Back to Home</button></a>
+    </div>
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <% include('../layouts/footer.ejs') %>
